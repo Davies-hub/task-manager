@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <div class="topbar">
+    <h1>Task Manager</h1>
+    <span>Cytonn Software Engineering Challenge 2026</span>
+  </div>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-label">Total tasks</div>
+      <div class="metric-value" id="m-total">—</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">High priority</div>
+      <div class="metric-value red" id="m-high">—</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">In progress</div>
+      <div class="metric-value blue" id="m-progress">—</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Completed</div>
+      <div class="metric-value green" id="m-done">—</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">All tasks</span>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="in_progress">In progress</button>
+        <button class="filter-btn" data-filter="done">Done</button>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Due date</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="task-table-body">
+        <tr><td colspan="5" class="empty">Loading tasks...</td></tr>
+      </tbody>
+    </table>
+
+    <div class="form-row">
+      <input type="text" id="new-title" placeholder="New task title..." />
+      <input type="date" id="new-date" />
+      <select id="new-priority">
+        <option value="">Priority</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button class="add-btn" id="add-task-btn">+ Add task</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
