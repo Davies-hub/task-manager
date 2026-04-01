@@ -15,7 +15,7 @@ A RESTful Task Management API built with Laravel 13 and MySQL.
 ## How to Run Locally
 
 1. **Clone the repository**
-   git clone <your-repo-url>
+   git clone <https://github.com/Davies-hub/task-manager.git>
    cd laravel
 
 2. **Install dependencies**
