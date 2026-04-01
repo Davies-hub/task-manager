@@ -104,16 +104,9 @@ The frontend is served from `public/index.html` and communicates with the Larave
 
 ## Deployment
 
-This repository currently does not include a public deployment URL.
+The project is live on Railway at:
 
-If you want to deploy it, a common pattern is:
-
-1. Push the repository to GitHub
-2. Create a new project on a deployment platform (Railway, Heroku, etc.)
-3. Add a MySQL database service
-4. Set the same database environment variables in the platform settings
-5. Use a web start command like:
-   `php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT`
+https://task-manager-production-ff4d.up.railway.app/
 
 ---
 
